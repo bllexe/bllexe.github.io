@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası - Dot Flow Puzzle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0b1326;
+      --card-bg: rgba(22, 33, 62, 0.85);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --primary-color: #a855f7;
+      --secondary-color: #3b82f6;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --accent-glow: rgba(168, 85, 247, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      background-image:
+        radial-gradient(circle at 15% 15%, rgba(168, 85, 247, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.12) 0%, transparent 40%);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 24px 16px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 30px;
+      margin-bottom: 30px;
+    }
+
+    .app-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 15px var(--accent-glow);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .last-updated {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      color: var(--text-main);
+      font-size: 0.98rem;
+      margin-bottom: 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--card-border);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="app-badge">Dot Flow Puzzle</div>
+      <h1>Gizlilik Politikası</h1>
+      <p class="last-updated">Son Güncelleme Tarihi: 28 Temmuz 2026</p>
+    </header>
+
+    <div class="card">
+      <h2>1. Giriş ve Genel Bakış</h2>
+      <p>
+        <strong>TigrisApp</strong> ("şirketimiz", "biz" veya "bizim") olarak geliştirdiğimiz <strong>Dot Flow
+          Puzzle</strong> mobil oyununu kullanırken gizliliğinize büyük önem veriyoruz. Bu Gizlilik Politikası belgesi,
+        uygulamamızı indirip kullanırken hangi verilerinizin toplandığını, nasıl kullanıldığını ve korunduğunu
+        açıklamaktadır.
+      </p>
+      <p>
+        Oyunu indirerek veya kullanarak bu Gizlilik Politikası şartlarını kabul etmiş sayılırsınız.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>2. Toplanan Bilgiler</h2>
+      <p>Dot Flow Puzzle oyun deneyiminizi geliştirmek, seviye ilerlemenizi kaydetmek ve ödülleri sunmak için aşağıdaki
+        sınırlı verileri toplayabiliriz:</p>
+      <ul>
+        <li><strong>Hesap ve Kullanıcı Bilgileri:</strong> Google İle Giriş Yap fonksiyonunu kullandığınızda adınız,
+          e-posta adresiniz ve profil kimliğiniz (User ID). Anonim giriş yapıldığında ise sadece rastgele oluşturulan
+          benzersiz bir oyuncu kimliği.</li>
+        <li><strong>Oyun İçi İlerleme Verileri:</strong> Tamamlanan seviyeler, skolar, en iyi süreler, kalan ipucu
+          sayıları ve satın alma durumları.</li>
+        <li><strong>Cihaz ve Teknik Veriler:</strong> Cihaz modeli, işletim sistemi sürümü, anonim cihaz tanımlayıcıları
+          ve uygulama performans günlükleri.</li>
+        <li><strong>Satın Alma Bilgileri:</strong> Google Play İçi Satın Alma (In-App Purchase) işlemleri doğrudan
+          Google Play altyapısı üzerinden güvenle işlenir. Kredi kartı veya finansal bilgileriniz tarafımızca saklanmaz.
+        </li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3. Bilgilerin Kullanım Amaçları</h2>
+      <p>Toplanan veriler yalnızca aşağıdaki amaçlar doğrultusunda işlenmektedir:</p>
+      <ul>
+        <li>Oyun içi seviye ilerlemenizi ve puanlarınızı bulutta (Firebase) senkronize etmek.</li>
+        <li>Skor tablosu (Leaderboard) ve günlük görevleri yönetmek.</li>
+        <li>Uygulama içi satın alımları ve VIP üyelik haklarını doğrulamak.</li>
+        <li>Reklam gösterimlerini (AdMob) yönetmek ve ödüllü reklam ipucu sistemini çalıştırmak.</li>
+        <li>Uygulama performansını izlemek ve olası teknik hataları gidermek.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4. Üçüncü Taraf Hizmetleri</h2>
+      <p>Dot Flow Puzzle, oyun deneyimini ve altyapıyı sağlamak için güvenilir üçüncü taraf hizmetleri kullanmaktadır.
+        Bu hizmetler kendi gizlilik politikalarına sahiptir:</p>
+      <ul>
+        <li><strong>Google Play Services & Billing:</strong> Kullanıcı kimlik doğrulama ve uygulama içi ödemeler için.
+          (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a>)
+        </li>
+        <li><strong>Google AdMob:</strong> Uygulama içi banner, geçiş ve ödüllü reklamların sunumu için. (<a
+            href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">AdMob Gizlilik
+            Politikası</a>)</li>
+        <li><strong>Firebase (Google Cloud):</strong> Veritabanı (Firestore) ve kullanıcı oturum yönetimi için. (<a
+            href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Gizlilik
+            Politikası</a>)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>5. Çocukların Gizliliği</h2>
+      <p>
+        Dot Flow Puzzle genel her yaştan kitleye hitap eden bir bulmaca oyunudur. 13 yaşın altındaki çocuklardan bilerek
+        kişisel olarak tanımlanabilir bilgi toplamıyoruz. Bir çocuğun bize kişisel bilgi sağladığını fark edersek, bu
+        bilgileri derhal sunucularımızdan sileriz.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>6. Veri Güvenliği ve Saklama</h2>
+      <p>
+        Oyuncu verileriniz Google Firebase ve yerel cihaz depolamasında endüstri standardı güvenlik önlemleri ile
+        saklanır. Verilerinizin yetkisiz erişim, kayıp veya kötüye kullanıma karşı korunması için gerekli tüm teknik ve
+        idari tedbirler alınmaktadır.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>7. Kullanıcı Hakları ve Veri Silme Talebi</h2>
+      <p>
+        Hesabınıza ait tüm kayıtlı verilerin (skorlar, seviye ilerlemeleri ve hesap bilgileri) silinmesini talep etme
+        hakkına sahipsiniz. Verilerinizin silinmesi için aşağıdaki iletişim adresimizden bizimle iletişime
+        geçebilirsiniz.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>8. İletişim</h2>
+      <p>Gizlilik politikamız veya verilerinizle ilgili her türlü soru, görüş ve talepleriniz için bizimle iletişime
+        geçebilirsiniz:</p>
+      <p style="margin-top: 10px;">
+        <strong>Geliştirici / Şirket:</strong> TigrisApp (Bilal Yakut)<br>
+        <strong>E-posta:</strong> <a href="mailto:mehemeylm@gmail.com">mehemeylm@gmail.com</a><br>
+        <strong>Paket Adı:</strong> com.tigrisapp.dotpuzzle
+      </p>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Dot Flow Puzzle - TigrisApp. Tüm Hakları Saklıdır.</p>
+    </footer>
+  </div>
+</body>
+
+</html>
