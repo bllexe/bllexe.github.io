@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası | SalonVIP - Tigrissoft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #7c3aed;
+      --primary-dark: #6d28d9;
+      --primary-light: #f5f3ff;
+      --primary-border: #ddd6fe;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --radius: 16px;
+      --shadow: 0 4px 20px -2px rgba(124, 58, 237, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding: 32px 16px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Header & Branding */
+    header {
+      background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 100%);
+      color: #ffffff;
+      padding: 48px 36px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px -5px rgba(124, 58, 237, 0.3);
+      margin-bottom: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.3) 0%, rgba(255,255,255,0) 70%);
+      border-radius: 50%;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header h1 {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: #e0e7ff;
+      font-size: 15px;
+      max-width: 620px;
+    }
+
+    .meta-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 13px;
+      color: #e0e7ff;
+    }
+
+    .meta-info span strong {
+      color: #ffffff;
+    }
+
+    /* Content Card */
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .quick-nav {
+      background: var(--primary-light);
+      border: 1px solid var(--primary-border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 36px;
+    }
+
+    .quick-nav h3 {
+      font-size: 15px;
+      color: var(--primary-dark);
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .quick-nav ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 8px;
+    }
+
+    .quick-nav a {
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+
+    .quick-nav a:hover {
+      color: #4c1d95;
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 36px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    h2 .section-num {
+      background: var(--primary-light);
+      color: var(--primary);
+      width: 28px;
+      height: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    ul, ol {
+      margin: 12px 0 18px 24px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .permission-box {
+      background: #f1f5f9;
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .permission-box h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+
+    .permission-box p {
+      font-size: 13.5px;
+      color: #475569;
+      margin-bottom: 0;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+      border: 1px solid #d8b4fe;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .contact-box p {
+      margin-bottom: 8px;
+    }
+
+    .contact-box strong {
+      color: #581c87;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px 10px;
+      }
+      header {
+        padding: 32px 20px;
+      }
+      header h1 {
+        font-size: 24px;
+      }
+      .content-card {
+        padding: 24px 18px;
+      }
+      .quick-nav ul {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <header>
+    <div class="brand-badge">Tigrissoft · Resmi Gizlilik Belgesi</div>
+    <h1>SalonVIP Gizlilik Politikası</h1>
+    <p>Bu Gizlilik Politikası, Tigrissoft tarafından geliştirilen SalonVIP mobil uygulamasının kullanıcı verilerini nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklamaktadır.</p>
+    
+    <div class="meta-info">
+      <span>Geliştirici: <strong>Tigrissoft</strong></span>
+      <span>Uygulama: <strong>SalonVIP (Salon Yönetim Sistemi)</strong></span>
+      <span>Son Güncelleme: <strong>Eylül 2026</strong></span>
+      <span>Yürürlük Tarihi: <strong>Eylül 2026</strong></span>
+    </div>
+  </header>
+
+  <!-- Main Content Card -->
+  <main class="content-card">
+
+    <!-- Hızlı Gezinme Menüsü -->
+    <nav class="quick-nav" aria-label="İçindekiler">
+      <h3>İçindekiler</h3>
+      <ul>
+        <li><a href="#giris">1. Giriş ve Genel İlkeler</a></li>
+        <li><a href="#veri-sorumlusu">2. Veri Sorumlusu</a></li>
+        <li><a href="#toplanan-veriler">3. Toplanan Bilgiler</a></li>
+        <li><a href="#cihaz-izinleri">4. Cihaz İzinleri ve Amacı</a></li>
+        <li><a href="#kullanim-amaclari">5. Verilerin İşlenme Amaçları</a></li>
+        <li><a href="#guvenlik">6. Veri Güvenliği ve Saklama</a></li>
+        <li><a href="#paylasim">7. Üçüncü Taraflarla Paylaşım</a></li>
+        <li><a href="#cocuk-gizliligi">8. Çocukların Gizliliği</a></li>
+        <li><a href="#kvkk-haklari">9. KVKK Kapsamındaki Haklarınız</a></li>
+        <li><a href="#hesap-silme">10. Hesap ve Veri Silme</a></li>
+        <li><a href="#iletisim">11. İletişim Bilgileri</a></li>
+      </ul>
+    </nav>
+
+    <!-- Bölüm 1 -->
+    <section id="giris">
+      <h2><span class="section-num">1</span> Giriş ve Genel İlkeler</h2>
+      <p>
+        <strong>Tigrissoft</strong> olarak geliştirdiğimiz <strong>SalonVIP</strong> mobil uygulamasını ("Uygulama") kullanan işletme sahipleri, yöneticiler, salon çalışanları ve ilgili tarafların gizliliğine ve kişisel verilerinin korunmasına büyük önem veriyoruz.
+      </p>
+      <p>
+        İşbu Gizlilik Politikası; 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK"), Avrupa Birliği Genel Veri Koruma Tüzüğü ("GDPR") ve Google Play Geliştirici Politikaları uyarınca hazırlanmıştır. SalonVIP mobil uygulamasını indirerek ve kullanarak bu politikada açıklanan koşulları kabul etmiş sayılırsınız.
+      </p>
+    </section>
+
+    <!-- Bölüm 2 -->
+    <section id="veri-sorumlusu">
+      <h2><span class="section-num">2</span> Veri Sorumlusu Bilgileri</h2>
+      <p>Kişisel verileriniz bakımından veri sorumlusu:</p>
+      <ul>
+        <li><strong>Geliştirici / Veri Sorumlusu:</strong> Tigrissoft</li>
+        <li><strong>Uygulama:</strong> SalonVIP Mobil Uygulaması</li>
+        <li><strong>Web Sitesi:</strong> <a href="https://salonvip.net" target="_blank" rel="noopener">https://salonvip.net</a></li>
+        <li><strong>İletişim & Destek E-postası:</strong> <a href="mailto:info@salonvip.net">info@salonvip.net</a></li>
+      </ul>
+    </section>
+
+    <!-- Bölüm 3 -->
+    <section id="toplanan-veriler">
+      <h2><span class="section-num">3</span> Toplanan Bilgiler</h2>
+      <p>SalonVIP, güzellik salonu ve kuaför yönetim hizmetlerinin eksiksiz yürütülebilmesi adına yalnızca operasyonun gerektirdiği verileri işler:</p>
+      <ul>
+        <li><strong>Hesap ve Giriş Bilgileri:</strong> Salon yöneticisi ve çalışanlarına ait ad, soyad, e-posta adresi, telefon numarası ve şifrelenmiş kimlik doğrulama belirteçleri.</li>
+        <li><strong>Salon Operasyonel Verileri:</strong> Salon adı, adres, çalışma saatleri, tanımlanan hizmet kategorileri, fiyat listeleri ve görev dağılımları.</li>
+        <li><strong>Müşteri ve Randevu Kayıtları:</strong> İşletmenin kendi kaydettiği müşteri isimleri, telefon numaraları, randevu geçmişi, hizmet tercihleri ve özel işlem notları (Örn: saç boya kodu, cilt tipi).</li>
+        <li><strong>Finans ve Kasa Bilgileri:</strong> Günlük tahsilat tutarları, ödeme yöntemleri (nakit, pos/kart, havale), adisyon özetleri ve personel prim hesaplamaları. (Kredi kartı numarası gibi hassas bankacılık verileri sistemimizde <u>asla saklanmaz</u>).</li>
+        <li><strong>Cihaz ve Kullanım Verileri:</strong> Uygulama performansını ve güvenliğini sağlamak amacıyla cihaz modeli, işletim sistemi sürümü ve hata günlüğü (crash log) verileri.</li>
+      </ul>
+    </section>
+
+    <!-- Bölüm 4 -->
+    <section id="cihaz-izinleri">
+      <h2><span class="section-num">4</span> Cihaz İzinleri ve Kullanım Amaçları</h2>
+      <p>Uygulama, temel işlevlerini yerine getirebilmek için cihazınızdan aşağıdaki izinleri talep edebilir. Bu izinler yalnızca belirtilen amaçlar doğrultusunda kullanılır:</p>
+
+      <div class="permission-box">
+        <h4>🌐 İnternet Erişimi (INTERNET & ACCESS_NETWORK_STATE)</h4>
+        <p>Salonunuzun randevu, müşteri ve kasa verilerini merkezi bulut sunucusu ile gerçek zamanlı olarak güvenli (SSL/TLS) biçimde senkronize etmek için zorunludur.</p>
+      </div>
+
+      <div class="permission-box">
+        <h4>📷 Kamera (CAMERA)</h4>
+        <p>Ürün barkodlarının taranarak stoktan hızlıca düşülmesi veya isteğe bağlı olarak hizmet/profil görsellerinin sisteme eklenmesi amacıyla kullanılır. Kamera arka planda kesinlikle çalıştırılmaz.</p>
+      </div>
+
+      <div class="permission-box">
+        <h4>📁 Dosya ve Depolama (READ/WRITE_EXTERNAL_STORAGE)</h4>
+        <p>Adisyon, fatura, finansal raporlar ve salon dökümanlarının (PDF) cihazınıza indirilmesi, önizlenmesi ve paylaşılabilmesi için gereklidir.</p>
+      </div>
+
+      <div class="permission-box">
+        <h4>🔐 Güvenli Depolama (Expo SecureStore)</h4>
+        <p>Oturumunuzun güvenliğini sağlamak adına kimlik doğrulama anahtarları (JWT Token) cihazınızın güvenli donanım alanında şifreli olarak saklanır.</p>
+      </div>
+    </section>
+
+    <!-- Bölüm 5 -->
+    <section id="kullanim-amaclari">
+      <h2><span class="section-num">5</span> Verilerin İşlenme Amaçları</h2>
+      <p>Toplanan kişisel ve operasyonel veriler şu amaçlarla sınırlı olarak işlenir:</p>
+      <ol>
+        <li>SalonVIP yazılım hizmetlerinin sunulması ve randevu takviminin yönetilmesi,</li>
+        <li>Salon personellerinin görev ve prim takiplerinin yapılması,</li>
+        <li>Günlük ve dönemsel kasa, ciro ve raporlama süreçlerinin yürütülmesi,</li>
+        <li>Müşterilere randevu bilgilendirme ve teyit bildirimlerinin iletilebilmesi,</li>
+        <li>Sistem güvenliğinin temini, kötüye kullanımın ve yetkisiz erişimlerin engellenmesi,</li>
+        <li>Yasal ve idari mevzuattan kaynaklanan yükümlülüklerin yerine getirilmesi.</li>
+      </ol>
+    </section>
+
+    <!-- Bölüm 6 -->
+    <section id="guvenlik">
+      <h2><span class="section-num">6</span> Veri Güvenliği ve Saklama</h2>
+      <p>
+        Tigrissoft, verilerinizin yetkisiz erişim, kayıp, imha veya değiştirilmeye karşı korunması için sektör standardı teknik ve idari tedbirleri uygulamaktadır:
+      </p>
+      <ul>
+        <li><strong>Uçtan Uca Şifreleme:</strong> Tüm istemci-sunucu iletişimleri 256-bit SSL/TLS şifreleme protokolü ile korunmaktadır.</li>
+        <li><strong>Şifreli Parolalar:</strong> Kullanıcı parolaları tek yönlü güçlü kriptografik özetleme (hashing) algoritmalarıyla saklanmaktadır.</li>
+        <li><strong>İzole Veri Mimarisi:</strong> Her salonun verileri çok kiracılı (multi-tenant) mimaride mantıksal olarak birbirinden tamamen yalıtılmış durumdadır; bir salon diğer salonun verilerini kesinlikle göremez.</li>
+        <li><strong>Düzenli Yedekleme:</strong> Olası sistem arızalarına karşı bulut altyapısında düzenli ve güvenli yedekleme yapılmaktadır.</li>
+      </ul>
+    </section>
+
+    <!-- Bölüm 7 -->
+    <section id="paylasim">
+      <h2><span class="section-num">7</span> Üçüncü Taraflarla Paylaşım</h2>
+      <p>
+        <strong>Kişisel ve ticari verileriniz kesinlikle üçüncü kişilere pazarlama veya reklam amacıyla SATILMAZ veya KİRALANMAZ.</strong>
+      </p>
+      <p>Verileriniz yalnızca aşağıdaki zorunlu hallerde paylaşılabilir:</p>
+      <ul>
+        <li>Sunucu barındırma, veritabanı ve bildirim hizmetleri sağlayan güvenilir bulut altyapı sağlayıcılarımız (yalnızca hizmetin ifası kapsamında),</li>
+        <li>Yürürlükteki mevzuat uyarınca yetkili adli ve idari makamlarca usulüne uygun olarak talep edilmesi halinde kanunen yetkili kurumlar.</li>
+      </ul>
+    </section>
+
+    <!-- Bölüm 8 -->
+    <section id="cocuk-gizliligi">
+      <h2><span class="section-num">8</span> Çocukların Gizliliği</h2>
+      <p>
+        SalonVIP, ticari işletme yönetimine yönelik profesyonel bir B2B uygulamasıdır. 13 yaşın (veya ilgili yargı bölgesinde belirlenen yasal yaş sınırının) altındaki çocuklara yönelik değildir ve bilerek çocuklardan veri toplanmamaktadır.
+      </p>
+    </section>
+
+    <!-- Bölüm 9 -->
+    <section id="kvkk-haklari">
+      <h2><span class="section-num">9</span> KVKK Kapsamındaki Haklarınız</h2>
+      <p>6698 sayılı KVKK’nın 11. maddesi uyarınca veri sahipleri Tigrissoft’a başvurarak:</p>
+      <ul>
+        <li>Kişisel verilerinin işlenip işlenmediğini öğrenme,</li>
+        <li>İşlenmişse buna ilişkin bilgi talep etme,</li>
+        <li>İşlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+        <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme,</li>
+        <li>KVKK şartları çerçevesinde kişisel verilerin silinmesini veya yok edilmesini talep etme haklarına sahiptir.</li>
+      </ul>
+    </section>
+
+    <!-- Bölüm 10 -->
+    <section id="hesap-silme">
+      <h2><span class="section-num">10</span> Hesap ve Veri Silme Talepleri</h2>
+      <p>
+        Google Play ve KVKK gereklilikleri doğrultusunda, kullanıcılar istedikleri zaman sistemdeki hesaplarının ve bu hesaplara bağlı kişisel verilerin silinmesini talep edebilirler.
+      </p>
+      <p>
+        Hesabınızı ve verilerinizi silmek için kayıtlı e-posta adresinizden <a href="mailto:info@salonvip.net">info@salonvip.net</a> adresine <strong>"Hesap Silme Talebi"</strong> başlıklı bir e-posta göndermeniz yeterlidir. Talebiniz en geç 30 gün içinde incelenerek yasal saklama yükümlülüğü bulunmayan tüm verileriniz sunucularımızdan kalıcı olarak imha edilecektir.
+      </p>
+    </section>
+
+    <!-- Bölüm 11 -->
+    <section id="iletisim">
+      <h2><span class="section-num">11</span> İletişim Bilgileri</h2>
+      <p>Bu Gizlilik Politikası veya kişisel verilerinizin işlenmesi ile ilgili her türlü soru, görüş ve talebiniz için bizimle iletişime geçebilirsiniz:</p>
+
+      <div class="contact-box">
+        <p><strong>Geliştirici Firma:</strong> Tigrissoft</p>
+        <p><strong>Ürün:</strong> SalonVIP Salon Yönetim Sistemi</p>
+        <p><strong>Web Adresi:</strong> <a href="https://salonvip.net" target="_blank" rel="noopener">https://salonvip.net</a></p>
+        <p><strong>Destek & İletişim:</strong> <a href="mailto:info@salonvip.net">info@salonvip.net</a></p>
+        <p><strong>Yetki Alanı:</strong> Türkiye Cumhuriyeti Mevzuatı (KVKK)</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 <strong>Tigrissoft</strong> · Tüm Hakları Saklıdır. | <a href="https://salonvip.net">salonvip.net</a></p>
+    <p style="margin-top: 6px; font-size: 12px; color: #94a3b8;">SalonVIP, Tigrissoft tarafından geliştirilmiş bir güzellik salonu ve kuaför yönetim platformudur.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
